@@ -15,7 +15,7 @@ recipesSelected = new EventEmitter<Recipe>();
             new Ingredient('Spanish Chorizo', 2),
             new Ingredient('Lacon Ham', 1)
         ]),
-        new Recipe('Cachopo', 'Breaded filet filled with ham and cheese, this is the most favourite meal for Asturas folk.',
+        new Recipe('Cachopo', 'Breaded filet filled with ham and cheese, this is the most favourite meal for Asturias folk.',
         'https://i.pinimg.com/originals/d5/a4/02/d5a402b784a1b95deea225ce692eda97.jpg', [
             new Ingredient('Beef Filet', 1),
             new Ingredient('Iberic Ham', 4),
