@@ -23,11 +23,12 @@ export class ShoppingListService {
       }
 
       addIngredients(ingredients: Ingredient[]) {
+        // const provIngredients = this.ingredients;
         // for (const ingredient of ingredients) {
-        //     if (this.ingredients.includes(ingredient)) {
-        //         this.ingredients[this.ingredients.indexOf(ingredient)].amount += ingredient.amount;
+        //     if (provIngredients.indexOf(ingredient) !== -1) {
+        //         provIngredients[this.ingredients.indexOf(ingredient)].amount += ingredient.amount;
         //     } else {
-        //         this.addIngredient(ingredient);
+        //         provIngredients.push(ingredient);
         //     }
         // }
         this.ingredients.push(...ingredients);

@@ -1,4 +1,5 @@
 import { Component /*, EventEmitter, Output*/ } from '@angular/core';
+import { ServerService } from '../server.service';
 
 @Component({
     selector: 'app-header',
@@ -10,4 +11,8 @@ export class HeaderComponent {
     // onSelect(feature: string) {
     //     this.featureSelected.emit(feature);
     // }
+    constructor(private serverService: ServerService) {}
+    onSaveData() {
+        this.serverService.saveData(this);
+    }
 }
