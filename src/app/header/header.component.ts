@@ -1,5 +1,6 @@
 import { Component /*, EventEmitter, Output*/ } from '@angular/core';
-import { ServerService } from '../server.service';
+import { Response } from '@angular/http';
+import { ServerService } from '../shared/server.service';
 
 @Component({
     selector: 'app-header',
@@ -12,7 +13,16 @@ export class HeaderComponent {
     //     this.featureSelected.emit(feature);
     // }
     constructor(private serverService: ServerService) {}
+
     onSaveData() {
-        this.serverService.saveData(this);
+        this.serverService.storeRecipes().subscribe(
+            (response: Response) => {
+                console.log(response);
+            }
+        );
+    }
+
+    onFetchData() {
+        this.serverService.getRecipes();
     }
 }
